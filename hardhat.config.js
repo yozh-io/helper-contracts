@@ -1,11 +1,12 @@
 require("@nomiclabs/hardhat-waffle");
 require("hardhat-deploy");
+require('dotenv').config();
 
 const accounts = {
   mnemonic:
-    process.env.MNEMONIC ||
-    "test test test test test test test test test test test junk",
+    process.env.MNEMONIC,
 };
+const alchemyApiKey = process.env.ALCHEMY_KEY;
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -28,11 +29,13 @@ module.exports = {
   networks: {
     hardhat: {
       forking: {
-        url: "https://mainnet-nethermind.blockscout.com/",
+        url: `https://eth-mainnet.alchemyapi.io/v2/${alchemyApiKey}`,
+        // url: "https://mainnet-nethermind.blockscout.com/",
       },
       saveDeployments: false,
       tags: ["test", "local"],
       accounts,
+      chainId: 1337,
     },
   },
   namedAccounts: {

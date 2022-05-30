@@ -13,3 +13,19 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
+## Deploy locally
+Firstly: set MNEMONIC and ALCHEMY_KEY into .env file.
+```
+npm i
+```
+Start node:
+```
+npx hardhat node --hostname 0.0.0.0
+```
+Deploy contrat:
+```
+node scripts/sample-script.js
+```
+As a result, you will get the contract address. Use this address to get tokens balances.
+
