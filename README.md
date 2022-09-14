@@ -23,7 +23,7 @@ Start node:
 ```
 npx hardhat node --hostname 0.0.0.0
 ```
-Deploy contrat:
+Deploy contract locally:
 ```
 npx hardhat run scripts/deploy.js --network localhost
 ```
