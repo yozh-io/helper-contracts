@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e7db301-853b-4f8b-af79-f66e2ddd3c6c" name="Default Changelist" comment="feat: deploy" />
+    <list default="true" id="3e7db301-853b-4f8b-af79-f66e2ddd3c6c" name="Default Changelist" comment="feat: deploy">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardhat.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/hardhat.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +79,7 @@
       <workItem from="1659515464934" duration="4463000" />
       <workItem from="1660212855539" duration="1326000" />
       <workItem from="1661423781639" duration="1126000" />
-      <workItem from="1663154272453" duration="1584000" />
+      <workItem from="1663154272453" duration="2780000" />
     </task>
     <task id="LOCAL-00001" summary="feat: deploy">
       <created>1653904254214</created>
