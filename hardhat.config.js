@@ -77,23 +77,23 @@ module.exports = {
       gasPrice: 'auto',
       accounts: [`0x${privateKey}`],
     },
-    // fantom: {
-    //   url: ``,
-    //   chainId: 250,
-    //   gasPrice: 'auto',
-    //   accounts: [`0x${privateKey}`],
-    // },
-    // gnosis: {
-    //   url: ``,
-    //   chainId: 100,
-    //   gasPrice: 'auto',
-    //   accounts: [`0x${privateKey}`],
-    // },
-    // binance: {
-    //   url: ``,
-    //   chainId: 56,
-    //   gasPrice: 'auto',
-    //   accounts: [`0x${privateKey}`],
-    // }
+    fantom: {
+      url: `https://rpc.fantom.network`,
+      chainId: 250,
+      gasPrice: 'auto',
+      accounts: [`0x${privateKey}`],
+    },
+    gnosis: {
+      url: `https://rpc.gnosischain.com`,
+      chainId: 100,
+      gasPrice: 'auto',
+      accounts: [`0x${privateKey}`],
+    },
+    binance: {
+      url: `https://bsc-dataseed.binance.org/`,
+      chainId: 56,
+      gasPrice: 'auto',
+      accounts: [`0x${privateKey}`],
+    }
   },
 };
