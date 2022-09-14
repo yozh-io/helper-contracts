@@ -10,7 +10,7 @@ npx hardhat compile
 npx hardhat clean
 npx hardhat test
 npx hardhat node
-node scripts/sample-script.js
+node scripts/deploy.js
 npx hardhat help
 ```
 
@@ -25,7 +25,7 @@ npx hardhat node --hostname 0.0.0.0
 ```
 Deploy contrat:
 ```
-node scripts/sample-script.js
+npx hardhat run scripts/deploy.js --network localhost
 ```
 As a result, you will get the contract address. Use this address to get tokens balances.
 
