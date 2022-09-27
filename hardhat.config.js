@@ -2,10 +2,9 @@ require("@nomiclabs/hardhat-waffle");
 require("hardhat-deploy");
 require('dotenv').config();
 
-const privateKey = process.env.OWNER_PRIVATE_KEY;
-const mnemonic = process.env.MNEMONIC;
+const mnemonic = process.env.MNEMONIC ||  "test test test test test test test test test test test junk";
 const alchemyKey = process.env.ALCHEMY_KEY || 'bP-PD1vNyqRuOv4zqfTiRlhKLhCnu13u';
-
+const privateKey = process.env.OWNER_PRIVATE_KEY;
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -33,13 +32,12 @@ module.exports = {
       forking: {
         url: `https://eth-mainnet.alchemyapi.io/v2/${alchemyKey}`,
       },
-      chainId: 1,
-      gasPrice: 'auto',
       accounts: {
         mnemonic,
         count: 10,
         accountsBalance: '1000000000000000000000',
       },
+      chainId: 1337,
     },
     rinkeby: {
       url: `https://eth-rinkeby.alchemyapi.io/v2/${alchemyKey}`,
@@ -95,5 +93,10 @@ module.exports = {
       gasPrice: 'auto',
       accounts: [`0x${privateKey}`],
     }
+  },
+  namedAccounts: {
+    deployer: {
+      default: 0,
+    },
   },
 };
