@@ -5,7 +5,8 @@ require('dotenv').config();
 const mnemonic = process.env.MNEMONIC ||  "test test test test test test test test test test test junk";
 const alchemyKey = process.env.ALCHEMY_KEY || 'bP-PD1vNyqRuOv4zqfTiRlhKLhCnu13u';
 const privateKey = process.env.OWNER_PRIVATE_KEY;
-
+const chain = Number(process.env.NODE_CHAIN);
+console.log('chain', chain);
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
@@ -29,15 +30,15 @@ module.exports = {
       url: 'http://127.0.0.1:8545',
     },
     hardhat: {
-      forking: {
-        url: `https://eth-mainnet.alchemyapi.io/v2/${alchemyKey}`,
-      },
+      // forking: {
+      //   url: `https://polygon-mainnet.g.alchemy.com/v2/${alchemyKey}`,
+      // },
       accounts: {
         mnemonic,
         count: 10,
         accountsBalance: '1000000000000000000000',
       },
-      chainId: 1337,
+      chainId: chain,
     },
     rinkeby: {
       url: `https://eth-rinkeby.alchemyapi.io/v2/${alchemyKey}`,
@@ -52,7 +53,7 @@ module.exports = {
       accounts: [`0x${privateKey}`],
     },
     polygon: {
-      url: ` https://polygon-mainnet.g.alchemy.com/v2/${alchemyKey}`,
+      url: `https://polygon-mainnet.g.alchemy.com/v2/${alchemyKey}`,
       chainId: 137,
       gasPrice: 'auto',
       accounts: [`0x${privateKey}`],
