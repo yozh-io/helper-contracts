@@ -26,10 +26,24 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 module.exports = {
   solidity: "0.8.4",
   networks: {
-    localhost: {
+    eth: {
       url: 'http://127.0.0.1:8545',
+      timeout: 0,
+    },
+    avalancheFork: {
+      url: 'http://127.0.0.1:8546',
+      timeout: 0,
+    },
+    gnosisFork: {
+      url: 'http://127.0.0.1:8547',
+      timeout: 0,
     },
     hardhat: {
+      blockGasLimit: 150000000,
+      // mining: {
+      //   auto: false,
+      //   interval: 5000,
+      // },
       // forking: {
       //   url: `https://polygon-mainnet.g.alchemy.com/v2/${alchemyKey}`,
       // },
