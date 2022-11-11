@@ -4,17 +4,17 @@ Firstly: set MNEMONIC, ALCHEMY_KEY and OWNER_PRIVATE_KEY into .env file.
 ```
 npm i
 ```
-###Start node:
+### Start node:
 ```
 npx hardhat node --hostname localhost
 ```
-###Deploy contract locally:
+### Deploy contract locally:
 ```
 npx hardhat run scripts/deploy.js --network localhost
 ```
 As a result, you will get the contract address. Use this address to get tokens balances.
 
-###Deploy to selected network:
+### Deploy to selected network:
 ```
 hardhat run --network <network> scripts/<file_name>.js
 ```
