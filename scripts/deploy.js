@@ -14,9 +14,11 @@ async function main() {
   // await hre.run('compile');
   // We get the contract to deploy
   const TokenHelper = await hre.ethers.getContractFactory("TokenHelper");
-  const tokenHelper = await TokenHelper.attach(
-    "0x8F4ec854Dd12F1fe79500a1f53D0cbB30f9b6134"
-  );
+  const tokenHelper = await TokenHelper.deploy();
+  // const tokenHelper = await TokenHelper.attach(
+  //   "0x8F4ec854Dd12F1fe79500a1f53D0cbB30f9b6134"
+  // );
+  console.log(`Deployed to ${tokenHelper.address}`);
 
   const result = await tokenHelper.batchTokenInfo(
     "0x929dC4dDe12aF8424DF1B92f686203E09CFEe7b4",

@@ -3,11 +3,22 @@
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.6.0",
     "chai": "^4.3.6",
+    "dotenv": "^16.0.1",
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.6.7",
     "hardhat": "^2.9.6",
-    "@openzeppelin/contracts": "^4.6.0",
     "hardhat-deploy": "^0.11.10"
+  },
+  "scripts": {
+    "polygon:fork": "NODE_CHAIN=137 hardhat node --fork https://polygon-mainnet.g.alchemy.com/v2/xi8rfSlcyqqEATNjAfE9irZShtr6ckTP",
+    "opt:fork": "NODE_CHAIN=10 hardhat node --fork https://opt-mainnet.g.alchemy.com/v2/PQf0LJwah4AZWWrd5ibwAGnYlo-jjo65",
+    "eth:fork": "NODE_CHAIN=1 hardhat node --fork https://eth-mainnet.alchemyapi.io/v2/4ZV3jxTRJCXXDvbptQhI-2k0fQyBQKq2",
+    "avalanche:fork": "NODE_CHAIN=43114 hardhat node --fork https://api.avax.network/ext/bc/C/rpc",
+    "arbitrum:fork": "NODE_CHAIN=42161 hardhat node --fork https://arb-mainnet.g.alchemy.com/v2/C4mlnF9QLmg_V7R8RZGQIwkF6lHbA0Dp",
+    "fantom:fork": "NODE_CHAIN=250 hardhat node --fork https://rpc.fantom.network",
+    "gnosis:fork": "NODE_CHAIN=100 hardhat node --fork https://rpc.ankr.com/gnosis",
+    "bnb:fork": "NODE_CHAIN=56 hardhat node --fork https://bsc-dataseed.binance.org/"
   }
 }

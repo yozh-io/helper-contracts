@@ -1,7 +1,25 @@
-# Basic Sample Hardhat Project
+# Helper contract to make a getBalance multicall
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+Firstly: set MNEMONIC, ALCHEMY_KEY and OWNER_PRIVATE_KEY into .env file.
+```
+npm i
+```
+### Start node:
+```
+npx hardhat node --hostname localhost
+```
+### Deploy contract locally:
+```
+npx hardhat run scripts/deploy.js --network localhost
+```
+As a result, you will get the contract address. Use this address to get tokens balances.
 
+### Deploy to selected network:
+```
+hardhat run --network <network> scripts/<file_name>.js
+```
+
+```
 Try running some of the following tasks:
 
 ```shell
@@ -10,6 +28,5 @@ npx hardhat compile
 npx hardhat clean
 npx hardhat test
 npx hardhat node
-node scripts/sample-script.js
+node scripts/deploy.js
 npx hardhat help
-```
